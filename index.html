@@ -43,6 +43,7 @@
     </style>
     <script>
         $(document).ready(function(){
+            let noticeText;
             $('#result_show').hide();
             $('#result_calc').click(function(){
                 $('#result_calc_upload').toggle();
@@ -61,6 +62,15 @@
             })
             $("input[type='file']").change(function(){
                 $(this).hide();
+            })
+            $('#peopleSetting').click(function(){
+                $('#people').val(VotePeople)
+            })
+            $('#peopleSetting').click(function(){
+                noticeText = document.getElementById('noticeContent');
+                if(noticeText){
+                    noticeText.parentNode.removeChild(noticeText);
+                }
             })
         })
     </script>
@@ -88,7 +98,7 @@
                         <input type="file" accept=".xlsx" id="result_calc_upload" onchange="calcResult(event)" class="form-control">
                     </li> -->
                     <li class="nav-item">
-                        <button type="button" class="btn btn-light" data-toggle="modal" data-target="#myModal">
+                        <button type="button" class="btn btn-light" data-toggle="modal" data-target="#myModal" id="peopleSetting">
                             <!-- <embed src="./users.svg" type="image/svg+xml"> -->
                             <img src="./image/users.png" class="iconBtn-png">
                             選擇投出幾位候選人

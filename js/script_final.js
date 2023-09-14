@@ -564,8 +564,8 @@ function celebrate(leader){
     content.style.placeItems = 'center';
     confetti({
         particleCount: 1000,
-        spread: 360,
-        origin: { y: 0.6 }
+        spread: 150,
+        origin: { y: 0.6 },
     });
 }
 
