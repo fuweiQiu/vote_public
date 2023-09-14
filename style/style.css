@@ -1,3 +1,9 @@
+@font-face {
+    font-family: 宋體;
+    src: local('./font/Songti.ttc') format("truetype");
+    font-weight: bold;
+}
+
 body{
     background-color: #333; /* 暗色模式下的背景顏色 */
     color: #fff; /* 暗色模式下的文字顏色 */
@@ -61,7 +67,7 @@ body{
     margin: 10px;
     font-weight: bold;
     color: white;
-    font-family: 'Noto Serif HK', serif;
+    font-family: 宋體 sans-serif;
 }
 .span_title:hover{
     cursor: pointer;
