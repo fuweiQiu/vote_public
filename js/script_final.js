@@ -645,6 +645,9 @@ function makeTextModal(title, text){
     btnClose.type = 'button';
     btnClose.classList.add('btn-close');
     btnClose.ariaLabel = 'Close';
+    btnClose.addEventListener('click',() => {
+      document.body.removeChild(modalContainer);
+    })
     modalHeader.appendChild(modalTitle);
     modalHeader.appendChild(btnClose);
 
