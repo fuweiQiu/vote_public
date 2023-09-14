@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <script src="./js/jquery.min.js"></script>
+        <style>
+            .a{
+                background-color: blueviolet;
+            }
+        </style>
+        <script>
+            let searchValue;
+            $(document).ready(function(){
+                let msg = 'msg1';
+                $('#fir').click(function(){
+                    // alert(msg);
+                });
+                msg = 'msg2';
+                $('#sec').click(function(){
+                    alert(msg);
+                })
+                $('marquee').dblclick(function(){
+                    alert('我是跑馬燈 不要碰我!!!')
+                })
+                $('#search').keydown(function(){
+                    searchValue = $(this).val();
+                    console.log(searchValue);
+                })
+                $('#content').scroll(function(){
+                    console.log('scrolled')
+                })
+                $(':contains(btn1)').click(function(){
+                    $('#img').show('slow', function(){
+                        console.log('動畫結束')
+                    })
+                })
+            })
+            // $(document).keydown(function(e){
+            //     console.log('按下', e.originalEvent.key)
+            // })
+            $.get({
+                url: 'test.json',
+                success: data => {console.log(data)}
+            })
+            $.get({
+                url: './index.html',
+                success: data => {console.log(data)}
+            })
+        </script>
+    </head>
+    <body>
+        <marquee behavior="100" direction="100">this is 閉包</marquee>
+        <button id="fir">msg1</button>
+        <button id="sec">msg2</button>
+        <marquee behavior="100" direction="100" id="runningtext">.load</marquee>
+        <div style="width: 100px; height: 100px; overflow: scroll;" id="content">
+            居家常見感染管制與自我防護課程大綱
+            1.	了解在一般居家中常見的疾病分類包括呼吸道、腸胃道及接觸傳染即相關因素
+            	呼吸道：肺結核、流感、COVID-19
+            	腸胃道：諾羅病毒
+            	接觸傳染：疥瘡
+            2.	了解其常見疾病的傳染途徑
+            	飛沫傳染
+            	空氣傳染
+            	接觸傳染
+            3.	了解其居家疾病的通報流程、預防方法及處理
+            	是否須通報衛生主管機關，如：衛生局
+            	預防方法如洗手（洗手五時機、洗手的時間）、戴口罩等
+            4.	環境清潔及消毒的基本技巧
+            	消毒液的使用、比例調配與定期消毒
+            	洗手液跟乾洗手液的使用時機
+        </div>
+        <input type="text" name="search" id="search">
+        <img src="../截圖 2023-08-11 下午2.17.58.png" alt="" id="img">
+    </body>
+</html>
