@@ -185,7 +185,11 @@ function handleFileUpload(event){
     let headerRow = document.createElement('tr');
     displayedColumns.forEach(key => {
       let th = document.createElement('th');
-      th.textContent = key;
+      if(key == '家長'){
+        th.textContent = '候選人';
+      }else{
+        th.textContent = key;
+      }
       headerRow.appendChild(th);
     });
     let actionTh = document.createElement('th');
@@ -334,7 +338,11 @@ function renderTable(data, displayedColumns, voteRow) {
     var headerRow = document.createElement('tr');
     displayedColumns.forEach(function(key) {
       var th = document.createElement('th');
-      th.textContent = key;
+      if(key == '家長'){
+        th.textContent = '候選人';
+      }else{
+        th.textContent = key;
+      }
       headerRow.appendChild(th);
     });
     var actionTh = document.createElement('th');
