@@ -1,4 +1,5 @@
-# 家長會投票系統
+# 家長會投票系統 ｜ 公開投票系統
+## GitHub連結：[`https://github.com/fuweiQiu/vote_public.git`](https://github.com/fuweiQiu/vote_public.git)
 ## 用到的函式庫以及插件
 ### CSS
 [`Bootstrap`](https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css)
